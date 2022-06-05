@@ -7,4 +7,4 @@ from django.http import HttpResponse
 def index(request):
 
 
-    return HttpResponse("welcome to insta clome" )
+    return render(request , 'insta/index.html')
