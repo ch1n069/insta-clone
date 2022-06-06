@@ -12,6 +12,7 @@ class HomeView (ListView):
     model = Post
 
     template_name = 'insta/home.html'
+    ordering = ['-id']
 
 
 # shows one post
