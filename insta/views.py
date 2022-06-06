@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 
-def index(request):
+def home(request):
 
 
-    return render(request , 'insta/index.html')
+    return render(request , 'insta/home.html')
