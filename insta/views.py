@@ -1,19 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from insta.models import Post 
 from django.views.generic import ListView , DetailView
 # Create your views here.
 
 
 
-def home(request):
+class HomeView (ListView):
+    model = Post
+
+    template_name = 'insta/home.html'
 
 
-    return render(request , 'insta/home.html')
 
 
-
-
-def about(request):
-
-
-    return render(request , 'insta/about.html')

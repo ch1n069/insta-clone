@@ -2,6 +2,24 @@
 <link rel="stylesheet" type="text/css" href="{% static 'insta/home.css' %}">
 
 <div class="container mt-4">
+    {% for post in object_list %}
+    <div class="card m-3">
+        <h2>{{Post.title}}</h2>
+        <img src="https://images.pexels.com/photos/240561/pexels-photo-240561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" height="400">
 
-    <h1>thi is it </h1>
+        <div class="card-body">
+            <h6>{{post.author}}</h6>
+            <p>{{post.body}}</p>
+
+            <h6>march 18</h6>
+
+
+        </div>
+
+    </div>
+    {% endfor %}
+
+
+
+
 </div> {% endblock content %}
