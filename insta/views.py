@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from insta.models import Post 
-from django.views.generic import ListView , DetailView
+from django.views.generic import ListView , DetailView , CreateView
 # Create your views here.
 
 
@@ -18,3 +18,10 @@ class ArticleDetailView (DetailView):
 
     template_name = "insta/post_details.html"
 
+
+
+class AddPostView(CreateView):
+
+    model = Post
+    template_name = "insta/add_post.html"
+    fields = '__all__'
