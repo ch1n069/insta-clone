@@ -12,7 +12,7 @@ class HomeView (ListView):
     model = Post
 
     template_name = 'insta/home.html'
-    ordering = ['-id']
+    ordering = ['-post_date']
     # ordering by id but conventional way is to use data 
 
 
