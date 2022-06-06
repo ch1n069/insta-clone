@@ -2,4 +2,5 @@
 
 <h2>
     {{post.title}}</h2>
-<small>{{post.author}}</small> {% endblock %}
+<small>{{post.author}}</small>
+<small><a href="{% url 'update_post' post.pk %}">edit post</a></small> {% endblock %}
