@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from insta.models import Post
-from insta.forms import PostForm 
+from insta.forms import PostForm , UpdateForm
 from django.views.generic import ListView , DetailView , CreateView , UpdateView
 # Create your views here.
 
@@ -36,8 +36,9 @@ class AddPostView(CreateView):
 class UpdatePostView(UpdateView):
 
     model = Post
+    form_class = UpdateForm
 
-    fields = ['title', 'title_tag','body']
+    # fields = ['title', 'title_tag','body']
 
     template_name = "insta/update_post.html"
     
