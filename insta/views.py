@@ -12,5 +12,9 @@ class HomeView (ListView):
     template_name = 'insta/home.html'
 
 
+class ArticleDetailView (DetailView):
 
+    model = Post
+
+    template_name = "insta/post_details.html"
 
