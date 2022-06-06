@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 
 class Post(models.Model):
     title = models.CharField(max_length=100, null=False)
+    title_tag = models.CharField(max_length=100, default="instagram post")
+
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
 
