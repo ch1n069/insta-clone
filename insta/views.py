@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from insta.models import Post
+from django.urls import reverse_lazy
 from insta.forms import PostForm , UpdateForm
-from django.views.generic import ListView , DetailView , CreateView , UpdateView
+from django.views.generic import ListView , DetailView , CreateView , UpdateView , DeleteView
 # Create your views here.
 
 
@@ -41,4 +42,13 @@ class UpdatePostView(UpdateView):
     # fields = ['title', 'title_tag','body']
 
     template_name = "insta/update_post.html"
+    
+
+class DeletePostView(DeleteView):
+    model = Post
+
+    # fields = ['title', 'title_tag','body']
+
+    template_name = "insta/delete_post.html"
+    success_url = reverse_lazy('home')
     
