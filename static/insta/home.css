@@ -4,6 +4,10 @@
                                                     margin-top: 5rem;
                                                 }
                                                 
+                                                #comment a {
+                                                    font-size: 10px;
+                                                }
+                                                
                                                 .card {
                                                     width: 600px;
                                                     border: 1px solid #DBDBDB;
