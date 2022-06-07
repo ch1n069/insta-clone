@@ -6,7 +6,7 @@ from datetime import datetime, date
 
 
 class HashTag(models.Model):
-    name = models.CharField
+    name = models.CharField(max_length=100 , default='instaperfect')
 
 
     def __str__(self):
