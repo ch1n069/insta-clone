@@ -28,15 +28,23 @@
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
                         <a class="nav-item nav-link" href="/"><i class="fa-solid fa-house"></i></a>
-                        <a class="nav-item nav-link" href="{% url 'add_post' %}"><i class="fa-solid fa-circle-plus"></i></a>
 
                     </div>
 
 
                     <!-- Navbar Right Side -->
+                    {% if user.is_authenticated %}
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link" href="{% url 'add_post' %}"><i class="fa-solid fa-circle-plus"></i></a>
+
+
+                    </div>
+                    {% else %} {% endif %}
                     <div class="navbar-nav">
                         <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
                         <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
                     </div>
                 </div>
             </div>
