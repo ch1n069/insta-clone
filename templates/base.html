@@ -9,12 +9,21 @@
     <script src="https://kit.fontawesome.com/951b649889.js" crossorigin="anonymous"></script>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> {% if title %}
-    <link rel="stylesheet" type="text/css" href="{% static 'insta/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}">
     <title>Instagram - web {{ title }}</title>
     {% else %}
     <title>Instagram application</title>
     {% endif %}
 </head>
+<style>
+    a {
+        color: "black";
+    }
+    
+    i {
+        color: rgb(0, 0, 0);
+    }
+</style>
 
 
 <body>
@@ -25,33 +34,60 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="/"><i class="fa-solid fa-house"></i></a>
-
-                    </div>
 
 
-                    <!-- Navbar Right Side -->
+                <div>
+                    <form class="form-inline my-2 my-lg-0 ml-auto">
+                        <input class="form-control" type="search" placeholder="search" aria-label="Search">
+                    </form>
+                </div>
+
+
+
+                <ul class="navbar-nav ml-auto mx-2">
+
+                    <li class="nav-item mx-2">
+                        <a class=" nav-link" href="/"><i class="fa-solid fa-house fa-2x"></i></a>
+                    </li>
+
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">
+                            <i class="fa-solid fa-compass fa-2x"></i>
+                        </a>
+                    </li>
+
+
                     {% if user.is_authenticated %}
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="{% url 'add_post' %}"><i class="fa-solid fa-circle-plus"></i></a>
-                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
 
+                    <li class="nav-item mx-2">
+                        <a class="nav-item nav-link" href="{% url 'add_post' %}"><i class="fa-solid fa-circle-plus fa-2x"></i></a>
 
+                    </li>
 
-                    </div>
+                    <li class="nav-item mx-2">
+                        <a class="nav-item nav-link" href="{% url 'logout' %}"><i class="fa-solid fa-arrow-right-from-bracket fa-2x"></i></a>
+
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-item nav-link" href=""><i class="fa-solid fa-user fa-2x"></i></a>
+
+                    </li>
                     {% else %}
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+                    <li class="nav-item mx-2">
+                        <a id="logout" class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+
+                    </li>
+
+                    <li class="nav-item mx-2">
                         <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
 
-                    </div>
-                    {% endif %}
+                    </li>
 
-                </div>
+                    {% endif %}
+                </ul>
             </div>
         </nav>
+        <hr>
     </header>
 
 
