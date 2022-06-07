@@ -1,4 +1,4 @@
-{% extends 'base.html' %}{% block title %} Create new post{% endblock %}{% block content %}
+{% extends 'base.html' %}{% block title %} Create new post{% endblock %}{% block content %} {% if user.is_authenticated %}
 <div class="card mt-5 p-3">
     <div class="form-group">
         <form action="" method="POST">
@@ -9,5 +9,6 @@
     </div>
 
 </div>
-
-{% endblock %}
+{% else %}
+<h4 class="mt-5">Ensure you are logged in first to create post </h4>
+{% endif %} {% endblock %}
