@@ -20,6 +20,7 @@ class Post(models.Model):
     body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
     hash_tag = models.CharField(max_length=100, default="instaperfect")
+    likes = models.ManyToManyField(User, related_name="insta_post")
 
 
 
