@@ -6,7 +6,8 @@
     <div class="card m-3">
         <div class="card-header">
             <h3>{{post.title}}</h3>
-            <small><a href="{% url 'update_post' post.pk %}">edit post</a></small>
+            {% if user.is_authenticated %}
+            <small><a href="{% url 'update_post' post.pk %}">edit post</a></small> {% endif %}
 
 
         </div>

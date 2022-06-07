@@ -2,7 +2,9 @@
 
 <h2>
     {{post.title}}</h2>
+{% if user.is_authenticated %}
+
 <small><a href="{% url 'delete_post' post.pk %}">Delete post</a></small>
 
 <small>{{post.author}}</small>
-<small><a href="{% url 'update_post' post.pk %}">edit post</a></small> {% endblock %}
+<small><a href="{% url 'update_post' post.pk %}">edit post</a></small> {% endif %} {% endblock %}
