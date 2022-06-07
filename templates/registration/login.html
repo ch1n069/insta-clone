@@ -1,5 +1,6 @@
 {% extends 'base-1.html' %}{% block title %} Login{% endblock %}{% block content %}
 <div class="card mt-5 p-3">
+    <h1>Login ...</h1>
     <div class="form-group">
         <form action="" method="POST">
             {% csrf_token %} {{form.as_p}}
