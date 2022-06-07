@@ -5,12 +5,21 @@ from datetime import datetime, date
 # Create your models here.
 
 
+class HashTag(models.Model):
+    name = models.CharField
+
+
+    def __str__(self):
+        return self.name 
+
+
 class Post(models.Model):
     title = models.CharField(max_length=100, null=False)
     title_tag = models.CharField(max_length=100,)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
+    hash_tag = models.CharField(max_length=100, default="instaperfect")
 
 
 
