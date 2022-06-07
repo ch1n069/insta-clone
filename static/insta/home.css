@@ -6,11 +6,16 @@
                                                 
                                                 .card {
                                                     width: 600px;
-                                                    border: 1px solid rgb(228, 76, 76);
+                                                    border: 1px solid #DBDBDB;
+                                                    border-radius: 10px;
                                                 }
                                                 
                                                 .card h1 {
                                                     color: red;
+                                                }
+                                                
+                                                .heart {
+                                                    font-size: 20px;
                                                 }
                                                 
                                                 #uno {
