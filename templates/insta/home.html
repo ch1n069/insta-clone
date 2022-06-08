@@ -5,13 +5,14 @@
     {% for post in object_list %}
     <div class="card m-3">
         <div class="card-header">
+
             <img class="rounded-circle" alt="50x50" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" height="50" data-holder-rendered="true"> {% if user.is_authenticated %}
             <small><a href="{% url 'update_post' post.pk %}">edit post</a></small> {% endif %}
 
 
         </div>
 
-        <img src="https://images.pexels.com/photos/240561/pexels-photo-240561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="" height="400">
+        <img src="" alt="" height="400">
 
         <div class="card-body">
             <div class="heart">
