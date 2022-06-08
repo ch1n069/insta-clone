@@ -63,7 +63,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['instagram-app01.herokuapp.com']
+# ALLOWED_HOSTS = ['instagram-app01.herokuapp.com']
 
 
 # Application definition
@@ -115,16 +115,16 @@ WSGI_APPLICATION = 'social.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'insta',
-        'USER': 'moringa',
-        'PASSWORD': 'newpassword',
-        'HOST': 'localhost',
-        'PORT': '',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'insta',
+#         'USER': 'moringa',
+#         'PASSWORD': 'newpassword',
+#         'HOST': 'localhost',
+#         'PORT': '',
+#     }
+# }
 
 
 
