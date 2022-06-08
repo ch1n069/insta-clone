@@ -76,4 +76,5 @@ class DeletePostView(DeleteView):
 class UserPostView(ListView):
 
     model = Post
+    
     template_name = "insta/users_posts.html"
