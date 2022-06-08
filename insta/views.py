@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, redirect
+from django.shortcuts import render, get_object_or_404, redirect 
 from django.http import HttpResponseRedirect 
 from insta.models import Post
 from django.urls import reverse_lazy, reverse
@@ -22,7 +22,14 @@ class HomeView (ListView):
 
     template_name = 'insta/home.html'
     ordering = ['-post_date']
+    
     # ordering by id but conventional way is to use data 
+    # def get(self, request):
+    #     posts = Post.object.order_by('-post_date')[:15]
+    #     ctx = {
+    #         'objects_list':posts
+    #     }
+    #     return render(request, 'insta/home.html', ctx)
 
 
 # shows one post
@@ -63,3 +70,10 @@ class DeletePostView(DeleteView):
     template_name = "insta/delete_post.html"
     success_url = reverse_lazy('home')
     
+
+
+
+class UserPostView(ListView):
+
+    model = Post
+    template_name = "insta/users_posts.html"

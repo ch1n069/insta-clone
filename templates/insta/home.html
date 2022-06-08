@@ -11,8 +11,8 @@
 
 
         </div>
-
-        <img src="" alt="" height="400">
+        {% if post.image %}
+        <img src="{{post.image.url}}" alt="" height="400"> {% endif %}
 
         <div class="card-body">
             <div class="heart">
