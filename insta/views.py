@@ -1,10 +1,19 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, get_object_or_404, redirect
+from django.http import HttpResponseRedirect 
 from insta.models import Post
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 from insta.forms import PostForm , UpdateForm
 from django.views.generic import ListView , DetailView , CreateView , UpdateView , DeleteView
 # Create your views here.
+
+
+
+def LikeView(request, pk):
+    post =  get_object_or_404(Post, id=request.POST.get('post_id'))
+    post.likes.add(request.user)
+    return HttpResponseRedirect(request, 'home')
+    
+
 
 
 

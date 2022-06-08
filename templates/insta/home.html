@@ -15,7 +15,10 @@
 
         <div class="card-body">
             <div class="heart">
-                <a href=""><i id="love" class="fa-regular fa-heart fa-lg mx-2"></i></a>
+                <form action="{% url 'like_post' post.pk %}">
+                    {% csrf_token %}
+                    <button type="submit" name="post_id" value="{{post.id}}"><i id="love" class="fa-regular fa-heart fa-lg mx-2"></i></button>
+                </form>
                 <a class=" mb-2 mx-2 " id="comment " href=" "><img src="{% static 'images/comment.png' %} " alt=" " height="22 "></i>
                 </a>
                 <a class="mx-2" href=" "><i class="fa-solid fa-paper-plane "></i></a>

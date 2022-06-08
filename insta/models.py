@@ -21,6 +21,7 @@ class Post(models.Model):
     post_date = models.DateField(auto_now_add=True)
     hash_tag = models.CharField(max_length=100, default="instaperfect")
     likes = models.ManyToManyField(User, related_name="insta_post")
+    header_image = models.ImageField(null = True,  upload_to="images")
 
 
 
