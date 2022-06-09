@@ -1,7 +1,7 @@
 {% extends 'base.html' %}{% block content %} {% load static %}
 <link rel="stylesheet" type="text/css" href="{% static 'insta/home.css' %}">
 <div class="container mt-4">
-    {% for post in post.object_list %}
+    {% for post in object_list %}
     <div class="card m-3">
         <div class="card-header">
 
