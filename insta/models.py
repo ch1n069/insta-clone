@@ -16,7 +16,7 @@ class HashTag(models.Model):
 class Post(models.Model):
     title = models.CharField(max_length=100, null=False)
     title_tag = models.CharField(max_length=100,)
-    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    author = models.ForeignKey(User,  on_delete=models.CASCADE, related_name="post")
     body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
     hash_tag = models.CharField(max_length=100, default="instaperfect")

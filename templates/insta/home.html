@@ -1,12 +1,12 @@
 {% extends 'base.html' %}{% block content %} {% load static %}
-<link rel="stylesheet" type="text/css" href="{% static 'insta/home.css' %}">
-
+<link rel="stylesheet" type="text/css" href="{% static 'insta/home.css' %}"> {{request.user.post.all}} {{user.id}}
 <div class="container mt-4">
     {% for post in object_list %}
     <div class="card m-3">
         <div class="card-header">
 
-            <img class="rounded-circle" alt="50x50" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" height="50" data-holder-rendered="true"> {% if user.is_authenticated %}
+            <img class="rounded-circle" alt="50x50" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" height="50" data-holder-rendered="true">
+            <small><a href="{% url 'user_posts' post.author.pk  %}">{{post.author}}</a></small> {% if user.is_authenticated %}
             <small><a href="{% url 'update_post' post.pk %}">edit post</a></small> {% endif %}
 
 
