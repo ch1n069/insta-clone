@@ -14,6 +14,7 @@ class HashTag(models.Model):
 
 
 class Post(models.Model):
+    __tablename__ = 'insta_post'
     title = models.CharField(max_length=100, null=False)
     title_tag = models.CharField(max_length=100,)
     author = models.ForeignKey(User,  on_delete=models.CASCADE, related_name="post")

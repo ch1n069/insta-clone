@@ -79,8 +79,9 @@ class UserPostView(ListView):
     
   
     template_name = "insta/users_posts.html"
-    ctx = {}
 
     def get_queryset(self):
+        user_profile = Post.objects.filter(author=self.kwargs['pk'])
+        print(user_profile)
        
-        return Post.objects.filter(author=self.kwargs['pk'])
+        return user_profile
