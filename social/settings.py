@@ -70,7 +70,7 @@ ALLOWED_HOSTS = ['https://instagram-app01.herokuapp.com/']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
-    'django.contrib.auth',
+    'django.contrib.auth',s
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
