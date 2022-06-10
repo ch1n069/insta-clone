@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect 
 from django.http import HttpResponseRedirect 
 from insta.models import Post
+from django.contrib.auth.models import User
 from django.urls import reverse_lazy, reverse
 from insta.forms import PostForm , UpdateForm
 from django.views.generic import ListView , DetailView , CreateView , UpdateView , DeleteView
@@ -81,7 +82,8 @@ class UserPostView(ListView):
     template_name = "insta/users_posts.html"
 
     def get_queryset(self):
-        user_profile = Post.objects.filter(author=self.kwargs['pk'])
+        user_post = Post.objects.filter(author=self.kwargs['pk'])
+        user_profile = User.objects.filter(id=2)
         print(user_profile)
-       
-        return user_profile
+        dataset = zip(user_profile, user_post)
+        return dataset

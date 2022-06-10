@@ -22,30 +22,30 @@ MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 # development
-# if config('MODE')=="dev":
-#    DATABASES = {
-#        'default': {
-#         'ENGINE': 'django.db.backends.postgresql',     
-#         'NAME': config('DB_NAME'),
-#         'USER': config('DB_USER'),
-#         'PASSWORD': config('DB_PASSWORD'),
-#         'HOST': config('DB_HOST'),
-#         'PORT': '',
-#        }
+if config('MODE')=="dev":
+   DATABASES = {
+       'default': {
+        'ENGINE': 'django.db.backends.postgresql',     
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': '',
+       }
        
-#    }
-# # production
-# else:
-#    DATABASES = {
-#        'default': dj_database_url.config(
-#            default=config('DATABASE_URL')
-#        )
-#    }
+   }
+# production
+else:
+   DATABASES = {
+       'default': dj_database_url.config(
+           default=config('DATABASE_URL')
+       )
+   }
 
-# db_from_env = dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(db_from_env)
+db_from_env = dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(db_from_env)
 
-# ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
 
 
 import os
@@ -63,7 +63,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []  
+ALLOWED_HOSTS = ['https://instagram-app01.herokuapp.com/']  
 
 
 # Application definition
