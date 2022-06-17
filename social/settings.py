@@ -76,6 +76,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
@@ -161,9 +162,26 @@ USE_I18N = True
 
 USE_TZ = True
 
+# cloudinary
+
+
+
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'dmob1y4c8',
+    'API_KEY': '192667882691452',
+    'API_SECRET': 'pxAI24pEj0luL1e5DRpEHQ-2b5k',
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
+
+
+
 
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'  
