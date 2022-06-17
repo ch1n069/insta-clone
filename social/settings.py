@@ -167,9 +167,9 @@ USE_TZ = True
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.getvenv('CLOUD_NAME'),
-    'API_KEY': os.getvenv('API_KEY'),
-    'API_SECRET': os.getvenv('API_SECRET'),
+    'CLOUD_NAME': os.getenv('CLOUD_NAME'),
+    'API_KEY': os.getenv('API_KEY'),
+    'API_SECRET': os.getenv('API_SECRET'),
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
