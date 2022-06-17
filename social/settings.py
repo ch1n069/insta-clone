@@ -170,8 +170,8 @@ USE_TZ = True
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': env('CLOUD_NAME'),
-    'API_KEY': env('API_KEY'),
+    'CLOUD_NAME':env('CLOUD_NAME'),
+    'API_KEY':env('API_KEY'),
     'API_SECRET':env('API_SECRET'),
 }
 
