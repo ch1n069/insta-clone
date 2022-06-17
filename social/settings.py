@@ -17,9 +17,6 @@ import dj_database_url
 from decouple import config,Csv
 
 
-env = environ.Env()
-environ.Env.read_env()
-
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
@@ -170,9 +167,9 @@ USE_TZ = True
 
 
 CLOUDINARY_STORAGE = {
-    'CLOUD_NAME':env('CLOUD_NAME'),
-    'API_KEY':env('API_KEY'),
-    'API_SECRET':env('API_SECRET'),
+    'CLOUD_NAME':config('CLOUD_NAME'),
+    'API_KEY':config('API_KEY'),
+    'API_SECRET':config('API_SECRET'),
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
