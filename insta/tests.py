@@ -25,4 +25,4 @@ class HashTagTestClass(TestCase):
 
 
     def test_instances(self):
-        self.assertTrue(isinstance(self.perfecto,name))
+        self.assertTrue(isinstance(self.perfect,HashTag))
