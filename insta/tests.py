@@ -22,3 +22,7 @@ class HashTagTestClass(TestCase):
 
     def setUp(self):
         self.perfect = HashTag(name="perfecto")
+
+
+    def test_instances(self):
+        self.assertTrue(isinstance(self.perfecto,name))
