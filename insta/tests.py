@@ -17,8 +17,8 @@ class PostTestClass(TestCase):
         self.assertTrue(isinstance(self.bruno,Post))
 
 
-# class HashTagTestClass(TestCase):
+class HashTagTestClass(TestCase):
 
 
-#     def setUp(self):
-#         self.perfect = HashTag(name="perfecto")
+    def setUp(self):
+        self.perfect = HashTag(name="perfecto")

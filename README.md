@@ -5,6 +5,25 @@
 
 * Bruno Gatiba 
 
+## Behaviour Driven Development 
+- Signin or signup into the system .
+- Create your first insta post .
+- View other posts by other users .
+- like the posts created by other user .
+- Comment on the posts created by other users .
+
+- Follow the other users .
+
+## Setup and installation instructions 
+* Follow the following steps to install the project :
+- First you need to clone the clone the app to your local machine 
+- Then create a virual environment for you project 
+- Activate the virtual environment 
+- Connect your postgres database in theproject settings 
+- Run the project using the follwing command
+ * (Python3 manage.py runserever )
+
+
 
 ## Version V 1.0
 
@@ -20,8 +39,10 @@
 ## Bugs 
 * There are no known bugs during the deployment of this project : 
 * Steps to follow if you find one 
+- Contact the owner of the project thats me on (brunolalpachino@gmail.com)[contact]
 - Clone the repo 
 - Create a new branch and give it the name of the feature you are trying to implement 
+- 
 ##  License 
 * Copyright (c) 2022 Bruno Gatiba
 
